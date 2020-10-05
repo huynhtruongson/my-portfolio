@@ -1,0 +1,46 @@
+.folder-card {
+    position: relative;
+    height: auto;
+    perspective: 800px;
+    cursor: pointer;
+    &__back {
+        & > svg {
+            fill: #caa968;
+        }
+    }
+    &__middle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        & > svg {
+            fill: #fff;
+        }
+    }
+    &__front {
+        position: absolute;
+        transition: transform 0.5s;
+        transform-origin: bottom;
+        top: 0;
+        left: 0;
+        width: 100%;
+        & > svg {
+            fill: #ddba75;
+        }
+        & > img {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            height: 40%;
+        }
+        &--active {
+            transform: rotateX(-33deg)
+        }
+    }
+    &:hover > &{
+        &__front {
+            transform: rotateX(-33deg);
+        }
+    }
+}

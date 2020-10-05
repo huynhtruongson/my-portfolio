@@ -1,0 +1,26 @@
+.skills-pages {
+    font-family: 'Noto Sans';
+    transform: translateY(50px);
+    opacity: 0;
+    animation: reset 1s ease-out 1s forwards;
+    .skill-category {
+        &__title {
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+        &__list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@keyframes reset {
+    to {
+        opacity: 1;
+        transform: initial;
+    }
+}
+
+

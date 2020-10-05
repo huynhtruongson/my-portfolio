@@ -1,0 +1,22 @@
+.media-link {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 1vmax;
+    right: 1vmax;
+    font-size: 3.5vmax;
+    > a {
+        color: #000;
+        transition: all .3s ease;
+        &:hover {
+            color: initial;
+            transform: scale(1.2);
+        }
+        &:nth-child(2):hover {
+            color: #2867B2;
+        }
+        &:nth-child(3):hover {
+            color: #4267B2;
+        }
+    }
+}

@@ -1,0 +1,54 @@
+
+@import '../../../../variable';
+@mixin show {
+    transform: rotateY(0);
+    opacity: 1;
+}
+@mixin hide {
+    transform: rotateY(180deg);
+    opacity: 0;
+}
+.progress-circle {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Noto Sans';
+    margin: 16px;
+    &__item {
+        border-radius: 50%;
+        box-shadow: $box-shadow-outer;
+        .CircularProgressbar-path {
+            transition: stroke-dashoffset 1s ease-out 0s;
+            stroke-linecap: butt;
+        }
+        .CircularProgressbar-trail {
+            stroke: transparent;
+        } 
+        &__img {
+            width: 44%;
+            height: auto;
+            transition: all 0.4s;
+            @include show()
+        }
+        &__percent {
+            position: absolute;
+            font-size: 3vmax;
+            font-weight: bold;
+            transition: all 0.4s;
+            @include hide();
+        }
+        &:hover & {
+            &__img {
+                @include hide()
+            }
+            &__percent {
+                @include show()
+            }
+        }
+    }   
+    & p {
+        font-size: 1.1vmax;
+        font-weight: 400;
+    }
+}
