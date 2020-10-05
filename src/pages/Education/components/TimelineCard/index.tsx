@@ -1,7 +1,5 @@
 import React, { ReactElement, ReactNode } from "react";
 import "./TimelineCard.scss";
-import { AppleFilled } from "@ant-design/icons";
-import { JsxAttribute } from "typescript";
 interface Props {
   children: ReactNode;
   time: string;

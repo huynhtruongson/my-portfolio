@@ -2,12 +2,11 @@ import Container from "components/Container";
 import education from "data/education";
 import React, { ReactElement } from "react";
 import TimelineCard from "./components/TimelineCard";
-import './Education.scss'
+import "./Education.scss";
 interface Props {}
-
-function EducationPage({}: Props): ReactElement {
+function EducationPage(props: Props): ReactElement {
   return (
-    <Container title="Education" classname='education-page-container'>
+    <Container title="Education" classname="education-page-container">
       <div className="education-page">
         {education.map((x) => (
           <TimelineCard
@@ -23,5 +22,4 @@ function EducationPage({}: Props): ReactElement {
     </Container>
   );
 }
-
 export default EducationPage;
